@@ -3,7 +3,7 @@ var app = express();
 var exec = require('child_process').exec;
 
 app.get("/", (req, res) => {
-  exec('fortune -u | cowsay', (err, stdout, stderr) => {
+  exec('fortune -u | cowsay -f tux', (err, stdout, stderr) => {
     if(err){
       res.end(err);
       return;
